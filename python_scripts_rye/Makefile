@@ -1,9 +1,12 @@
 ####
-#### Makefile for Python project
+#### Makefile for new Python project
 #### last update: 2024.02.06
 ####
 
 PYTHON_VERSION = 3.12
+
+.PHONY: all
+all:
 
 .PHONY: sync
 sync:

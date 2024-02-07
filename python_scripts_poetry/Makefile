@@ -5,6 +5,9 @@
 
 PYTHON_VERSION = 3.12
 
+.PHONY: all
+all:
+
 .PHONY: sync
 sync:
 	if [ ! -e .python-version ]; then pyenv local ${PYTHON_VERSION}; fi
