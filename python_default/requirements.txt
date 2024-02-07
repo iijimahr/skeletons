@@ -1,0 +1,52 @@
+# utilities
+ipython
+ipykernel
+ruff
+black
+mypy
+pytest
+tomli_w
+
+# numerical analysis
+numpy
+numba
+scipy
+sympy
+
+# visualization
+matplotlib
+pandas
+seaborn
+colorcet
+cmocean
+pyvista
+ipyvtklink
+
+## domain-specific
+astropy
+sunpy
+ChiantiPy
+pfsspy
+streamtracer
+
+## io
+h5py
+netCDF4
+vtk
+
+# machine learning
+scikit-learn
+jax
+torch
+torchvision
+torchaudio
+lightning
+tensorflow
+
+# macOS-specific
+mlx
+tensorflow-metal
+
+# web
+flask
+jinja2
