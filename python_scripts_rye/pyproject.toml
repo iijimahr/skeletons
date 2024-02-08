@@ -4,17 +4,17 @@ version = "0.0.1"
 description = "Scripts for data analysis"
 authors = [{ name = "H. Iijima", email = "dummy@email.com" }]
 dependencies = [
-  "numpy~=1.26",
-  "matplotlib~=3.8",
-  "scipy~=1.12",
-  "ipykernel~=6.29",
-  # "ruff~=0.2",
-  # "mypy~=1.8",
-  # "pytest~=8.0",
+  "numpy",
+  "matplotlib",
+  "scipy",
+  "ipykernel",
+  # "ruff",
+  # "mypy",
+  # "pytest",
   # "flask @ git+https://github.com/pallets/flask",
   # "flask @ file:///Users/iijimahr/flask",
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 
 [tool.rye]
 managed = true

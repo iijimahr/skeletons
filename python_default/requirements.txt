@@ -36,16 +36,17 @@ vtk
 
 # machine learning
 scikit-learn
-jax
+jax==0.4.24
+jaxlib==0.4.24
 torch
 torchvision
 torchaudio
 lightning
-tensorflow
+# tensorflow  # requires cpython==3.11
 
 # macOS-specific
 mlx
-tensorflow-metal
+# tensorflow-metal
 
 # web
 flask

@@ -1,10 +1,10 @@
 ####
 #### Makefile for default Python virtualenv
-#### last update: 2024.02.07
+#### last update: 2024.02.09
 ####
 
 VENV_NAME = default
-PYTHON_VERSION = 3.11
+PYTHON_VERSION = 3.12
 
 .PHONY: all
 all:
