@@ -31,7 +31,7 @@ comm==0.2.1
 contourpy==1.2.0
 cycler==0.12.1
 dask==2024.1.1
-debugpy==1.8.0
+debugpy==1.8.1
 decorator==5.1.1
 defusedxml==0.7.1
 executing==2.0.1

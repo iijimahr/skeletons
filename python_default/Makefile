@@ -12,8 +12,7 @@ all:
 .PHONY: sync
 sync:
 	pyenv local ${PYTHON_VERSION}
-	python -m venv .venv --prompt ${VENV_NAME}
-	.venv/bin/python -m pip install -U pip
+	python -m venv .venv --upgrade-deps --prompt ${VENV_NAME}
 	.venv/bin/python -m pip install -r requirements.txt
 	.venv/bin/python -m pip freeze > requirements.lock
 
