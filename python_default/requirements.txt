@@ -42,7 +42,7 @@ torch
 torchvision
 torchaudio
 lightning
-# tensorflow  # requires cpython==3.11
+# tensorflow  # requires cpython==3.11 (2024.02.13)
 
 # macOS-specific
 mlx

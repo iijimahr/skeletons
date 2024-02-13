@@ -23,6 +23,7 @@ sync: ${LOCK_FILE}
 	pyenv local ${PYTHON_VERSION}
 
 requirements.lock: .python-version ${DEPS_FILE}
-	python -m venv .venv --upgrade-deps --prompt ${VENV_NAME}
+	pyenv exec python -m venv .venv --upgrade-deps --prompt ${VENV_NAME}
 	.venv/bin/python -m pip install -r ${DEPS_FILE}
 	.venv/bin/python -m pip freeze > ${LOCK_FILE}
+
