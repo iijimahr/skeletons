@@ -1,0 +1,14 @@
+[project]
+name = "project-name"
+version = "0.0.1"
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "scipy",
+  "ipykernel",
+  # "ruff",
+  # "mypy",
+  # "pytest",
+  # "flask @ git+https://github.com/pallets/flask",
+  # "flask @ file:///Users/iijimahr/flask",
+]

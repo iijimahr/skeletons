@@ -1,11 +1,11 @@
 ####
-#### Makefile for default Python virtualenv
+#### Makefile for new Python project
 ####
 
 VENV_NAME = default
 PYTHON_VERSION = 3.12
-DEPS_FILE = requirements.txt
-LOCK_FILE = requirements.lock
+DEPS_FILE  = pyproject.toml
+LOCK_FILE = requirements.txt
 
 .PHONY: all
 all:
@@ -23,5 +23,6 @@ sync: ${LOCK_FILE}
 
 ${LOCK_FILE}: .python-version ${DEPS_FILE}
 	pyenv exec python -m venv .venv --upgrade-deps --prompt ${VENV_NAME}
-	.venv/bin/python -m pip install -r ${DEPS_FILE}
-	.venv/bin/python -m pip freeze > ${LOCK_FILE}
+	.venv/bin/python -m pip install pip-tools
+	.venv/bin/pip-compile --output-file=${LOCK_FILE} ${DEPS_FILE}
+	.venv/bin/pip-sync ${LOCK_FILE}
