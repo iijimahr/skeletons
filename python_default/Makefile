@@ -23,5 +23,5 @@ sync: ${LOCK_FILE}
 
 ${LOCK_FILE}: .python-version ${DEPS_FILE}
 	pyenv exec python -m venv .venv --upgrade-deps --prompt ${VENV_NAME}
-	.venv/bin/python -m pip install -r ${DEPS_FILE}
+	.venv/bin/python -m pip install -r ${DEPS_FILE} --compile --no-binary numpy,numba,matplotlib
 	.venv/bin/python -m pip freeze > ${LOCK_FILE}
