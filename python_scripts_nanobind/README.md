@@ -9,4 +9,9 @@
   - ctypes
   - Python/C API (`Python.h`で直接書く)
 - 本環境はnanobindを利用(比較的容易&高速)
-  - <https://github.com/wjakob/nanobind>
+  - GitHub: <https://github.com/wjakob/nanobind>
+
+## Usage
+
+1. Setup venv by `make sync`
+2. Build and test module by `make`
