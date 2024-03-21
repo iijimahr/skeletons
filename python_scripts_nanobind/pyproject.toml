@@ -1,0 +1,14 @@
+[project]
+name = "nanobind_sample"
+version = "0.0.1"
+dependencies = ["numpy", "matplotlib", "nanobind"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

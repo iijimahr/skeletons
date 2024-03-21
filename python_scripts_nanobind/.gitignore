@@ -1,0 +1,6 @@
+build
+.venv
+*.so
+*.png
+.python-version
+requirements.txt
