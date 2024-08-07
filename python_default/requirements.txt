@@ -6,12 +6,14 @@ black
 mypy
 pytest
 tomli_w
+pydantic
 
 # numerical analysis
 numpy
 numba
 scipy
 sympy
+flatbuffers
 
 # visualization
 matplotlib
@@ -26,28 +28,32 @@ ipyvtklink
 astropy
 sunpy
 ChiantiPy
-pfsspy
+AIApy
+# pfsspy => replaced by sunkit-magex
+sunkit-magex
 streamtracer
 
 ## io
 h5py
 netCDF4
 vtk
+# pyhdf  # could not build
 
 # machine learning
 scikit-learn
-jax==0.4.24
-jaxlib==0.4.24
+jax==0.4.31
+jaxlib==0.4.31
 torch
 torchvision
 torchaudio
 lightning
 # tensorflow  # requires cpython==3.11 (2024.02.13)
 
-# macOS-specific
-mlx
+# # macOS-specific
+# mlx
 # tensorflow-metal
 
 # web
 flask
 jinja2
+
