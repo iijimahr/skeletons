@@ -1,8 +1,8 @@
-# Skelton of C++ project with doctest and Make
+# Skeleton of C++ project with doctest and Make
 
 ## About
 
-- Skelton of C++ project with unit testing by `doctest`
+- Skeleton of C++ project with unit testing by `doctest`
 - `doctest`: <https://github.com/doctest/doctest>
 - Use GNU Make
 
