@@ -1,4 +1,4 @@
-# Skelton of C++ project with doctest
+# Skelton of C++ project with doctest and Make
 
 ## About
 
@@ -10,10 +10,11 @@
 
 ```bash
 # Download doctest
-$ cd third_party && git clone https://github.com/doctest/doctest && cd -
+$ git clone https://github.com/doctest/doctest third_party/doctest
+$ cd third_party/doctest && git checkout tags/v2.4.10 && cd -
 
 # Choose compiler and other options
-$ vi Makefile.inc
+$ vi config.mk
 
 # Develop app
 $ make run  # run app

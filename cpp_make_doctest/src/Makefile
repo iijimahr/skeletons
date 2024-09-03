@@ -14,5 +14,5 @@ TRGT := a.out
 ## Run executable
 RUN_COMMAND := ./$(TRGT)
 
--include ../Makefile.inc
+-include ../config.mk
 -include $(DEPS)
