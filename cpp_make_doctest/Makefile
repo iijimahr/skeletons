@@ -4,7 +4,12 @@
 
 .PHONY: all
 all:
+	make init
 	make build
+
+.PHONY: init
+init:
+	make -C third_party
 
 .PHONY: build
 build:
