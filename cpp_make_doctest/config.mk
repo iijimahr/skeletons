@@ -2,26 +2,21 @@
 ### Common configurations
 ###
 
-## Build level
-DEBUG_LEVEL := 1  # Debug version
-# DEBUG_LEVEL := 0  # Release version (Optimized)
+## Build level (0: Debug, else: Release)
+BUILD_LEVEL ?= 0
 
 ## Files removed by `make clean`
 CLEAN_FILES := *.d *.o *~ *.out
 
 ## Compiler
 CXX := clang++
-# CXX := g++-14
 
 ## Compiler options
 CXXFLAGS := -Wall -Wextra -Werror -std=c++17
-ifeq ($(DEBUG_LEVEL), 1)
-CXXFLAGS += -O0 -fsanitize=undefined
-ifeq ($(CXX), clang++)
-CXXFLAGS += -fsanitize=address -g  # debugging (for clang)
-endif
+ifeq ($(BUILD_LEVEL), 0)
+CXXFLAGS += -O0 -fsanitize=undefined,address
 else
-CXXFLAGS += -O2 -march=native -DNDEBUG
+CXXFLAGS += -O2 -march=native -DNBUILD
 endif
 
 ## Add include directory of project
