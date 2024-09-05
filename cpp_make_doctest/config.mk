@@ -11,19 +11,22 @@ CLEAN_FILES := *.d *.o *~ *.out
 ## Compiler
 CXX := clang++
 
-## Compiler options
-CXXFLAGS := -Wall -Wextra -Werror -std=c++17
-ifeq ($(BUILD_LEVEL), 0)
-CXXFLAGS += -O0 -fsanitize=undefined,address
-else
-CXXFLAGS += -O2 -march=native -DNBUILD
-endif
-
 ## Add include directory of project
-CPPFLAGS += -I$(PROJECT_ROOT)/src -I$(PROJECT_ROOT)/test
+CPPFLAGS := -I$(PROJECT_ROOT)/src -I$(PROJECT_ROOT)/test
 
 ## Add third party libraries
 CPPFLAGS += -I$(PROJECT_ROOT)/third_party/doctest
+
+## Compiler options
+CXXFLAGS := -Wall -Wextra -Werror -std=c++17 -pipe
+
+## Add BUILD_LEVEL dependent options
+ifeq ($(BUILD_LEVEL), 0)
+CXXFLAGS += -O0 -fsanitize=undefined,address
+else
+CXXFLAGS += -O2 -march=native
+CPPFLAGS += -DNDEBUG
+endif
 
 # Dependency generation
 DEP_CXX := $(CXX)
@@ -48,7 +51,7 @@ $(TRGT): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ $^
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -o $@ -c $<
 
 %.d: %.cpp
-	$(DEP_CXX) $(CPPFLAGS) -MM $< -MF $@
+	$(DEP_CXX) $(CPPFLAGS) -MF $@ -MM $<
