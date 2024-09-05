@@ -9,10 +9,14 @@
 ## Usage
 
 ```bash
-# Set build options
-$ export CXX="/opt/homebrew/opt/llvm/bin/clang++"
-$ export CXX_FLAGS="-Wall -Wextra -std=c++17 -O0 -fsanitize=undefined"  # debug
-# $ export CXX_FLAGS="-Wall -Wextra -std=c++17 -O2 -march=native"  # release
+# Compiler
+$ export CXX="clang++"
+
+# Compiler options (Debug)
+$ export CXXFLAGS="-Wall -Wextra -std=c++17 -O0 -pipe -fsanitize=undefined,address"
+
+# # Compiler options (Release)
+# $ export CXXFLAGS="-Wall -Wextra -std=c++17 -O2 -pipe -march=native -DNDEBUG"
 
 # Build
 $ cmake -B build . && cd build
