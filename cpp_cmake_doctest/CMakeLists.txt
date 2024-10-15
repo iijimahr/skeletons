@@ -18,7 +18,7 @@ file(GLOB SOURCES "src/*.cpp")
 add_executable(app ${SOURCES})
 
 # Target: Unit test
-file(GLOB TEST_SOURCES "test/*.cpp")
+file(GLOB TEST_SOURCES "tests/*.cpp")
 add_executable(test_app ${TEST_SOURCES})
 
 # Fetch doctest

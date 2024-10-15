@@ -15,7 +15,7 @@ CXX := clang++
 CPPFLAGS := -I$(PROJECT_ROOT)/src -I$(PROJECT_ROOT)/test
 
 ## Add third party libraries
-CPPFLAGS += -I$(PROJECT_ROOT)/third_party/doctest
+CPPFLAGS += -isystem $(PROJECT_ROOT)/third_party/doctest
 
 ## Compiler options
 CXXFLAGS := -Wall -Wextra -Werror -std=c++17 -pipe
