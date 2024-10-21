@@ -38,7 +38,7 @@ def plot_data(fig_type="png") -> None:
         vmax=1.1,
         rasterized=rasterized,
     )
-    plt.colorbar(im, ax=ax, shrink=0.8, pad=0.02)
+    fig.colorbar(im, ax=ax, shrink=0.8, pad=0.02)
     ax.set_xlabel(r"$x$")
     ax.set_ylabel(r"$y$")
     ax.set_xlim(0.0, 2.0 * np.pi)
