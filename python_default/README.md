@@ -41,6 +41,6 @@
 1. Install `pyenv` command
 2. Generate `.venv` by `make sync`
 3. Add `PATH` environment variable to shell config (e.g., `.bashrc`)
-   - bash: `export PATH="/<somewhere>/python_default/.venv/bin:$PATH"`
+   - bash: `export PATH="/<somewhere>/python_default/venv/bin:$PATH"`
 4. (Optional) Add `PATH` to use `venv` in current (project) directory if exist
-   - bash: `export PATH=".venv/bin:$PATH"`
+   - bash: `export PATH="venv/bin:$PATH"`

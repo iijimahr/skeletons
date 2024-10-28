@@ -4,6 +4,7 @@
 ###
 
 VENV_NAME = default
+VENV_DIR = venv
 PYTHON_VERSION = 3.12
 DEPS_FILE  = pyproject.toml
 LOCK_FILE = requirements.txt
@@ -23,7 +24,7 @@ clean:
 .PHONY: clean_env
 clean_env:
 	rm -f .python-version ${LOCK_FILE}
-	rm -rf .venv
+	rm -rf $(VENV_DIR)
 
 .PHONY: cmake
 cmake:
@@ -39,7 +40,7 @@ sync: ${LOCK_FILE}
 	pyenv local ${PYTHON_VERSION}
 
 ${LOCK_FILE}: .python-version ${DEPS_FILE}
-	pyenv exec python -m venv .venv --upgrade-deps --prompt ${VENV_NAME}
-	.venv/bin/python -m pip install pip-tools
-	.venv/bin/pip-compile --output-file=${LOCK_FILE} ${DEPS_FILE}
-	.venv/bin/pip-sync ${LOCK_FILE}
+	pyenv exec python -m venv $(VENV_DIR) --upgrade-deps --prompt ${VENV_NAME}
+	$(VENV_DIR)/bin/python -m pip install pip-tools
+	$(VENV_DIR)/bin/pip-compile --output-file=${LOCK_FILE} ${DEPS_FILE}
+	$(VENV_DIR)/bin/pip-sync ${LOCK_FILE}

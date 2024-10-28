@@ -19,6 +19,7 @@ executing==2.0.1
 fonttools==4.49.0
     # via matplotlib
 ipykernel==6.29.2
+    # via project-name (pyproject.toml)
 ipython==8.21.0
     # via ipykernel
 jedi==0.19.1
@@ -32,6 +33,7 @@ jupyter-core==5.7.1
 kiwisolver==1.4.5
     # via matplotlib
 matplotlib==3.8.3
+    # via project-name (pyproject.toml)
 matplotlib-inline==0.1.6
     # via
     #   ipykernel
@@ -40,6 +42,7 @@ nest-asyncio==1.6.0
     # via ipykernel
 numpy==1.26.4
     # via
+    #   project-name (pyproject.toml)
     #   contourpy
     #   matplotlib
     #   scipy
@@ -76,6 +79,7 @@ pyzmq==25.1.2
     #   ipykernel
     #   jupyter-client
 scipy==1.12.0
+    # via project-name (pyproject.toml)
 six==1.16.0
     # via
     #   asttokens
