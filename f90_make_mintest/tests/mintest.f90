@@ -1,4 +1,8 @@
 !==============================================================================!
+!    mintest: Minimal unit test framework
+!    * Fortran version.
+!    * See https://github.com/iijimahr/mintest for details.
+!
 !    SPDX-FileCopyrightText: Copyright (c) 2024 Haruhisa Iijima
 !    SPDX-License-Identifier: BSD-3-Clause
 !==============================================================================!
