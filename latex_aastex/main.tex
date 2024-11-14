@@ -1,0 +1,140 @@
+\documentclass[linenumbers]{aastex631}
+% \documentclass[manuscript,linenumbers]{aastex631}
+% \documentclass[manuscript,linenumbers,trackchanges]{aastex631}
+
+%% include Latex packages
+\usepackage{color}
+\usepackage{bm}
+\usepackage{mathtools}
+% \usepackage{url}
+
+%% define commands
+\newcommand{\tred}[1]{\textbf{\textcolor{red}{#1}}}
+% % \newcommand{\tred}[1]{#1}
+\newcommand{\tblue}[1]{\textbf{\textcolor{blue}{#1}}}
+% \newcommand{\tblue}[1]{#1}
+\newcommand{\figdir}{./figs}
+
+\begin{document}
+
+%%%%
+%%%% Title
+%%%%
+\title{
+  Template file
+}
+
+%%%%
+%%%% Authors
+%%%%
+\correspondingauthor{Haruhisa Iijima}
+\email{h.iijima@isee.nagoya-u.ac.jp}
+
+\author[0000-0000-0000-0000]{Abcd Efgh}
+\affiliation{
+  affiliation 1
+}
+\affiliation{
+  affiliation 2
+}
+
+\author[1111-1111-1111-1111]{Ijkl Mnop}
+\affiliation{
+  affiliation 3
+}
+
+%%%%
+%%%% Abstract
+%%%%
+\begin{abstract}
+  ABSTRACT\@.
+\end{abstract}
+
+%%%%
+%%%% Keywords
+%%%%
+\keywords{
+  magnetohydrodynamics (MHD) --- Sun: chromosphere --- Sun: corona --- Solar wind
+}
+
+%%%%
+%%%% Introduction
+%%%%
+\section{Introduction\label{sec:intro}}
+
+Sample text.
+
+Sample citation by~\cite{efgh2112}.
+
+Sample citation \citep{efgh2112}.
+
+
+%%%%
+%%%% Methods
+%%%%
+\section{Methods\label{sec:methods}}
+
+Sample text.
+
+
+%%%%
+%%%% Results
+%%%%
+\section{Results\label{sec:results}}
+
+Sample equations
+\begin{equation}
+  \frac{\partial}{\partial s}\left(
+    \kappa \frac{\partial T}{\partial s}
+  \right) + Q_\mathrm{ext} + Q_\mathrm{rad} = 0.
+\end{equation}
+
+Sample figure.
+\begin{figure}[ht!]
+  \plotone{\figdir/sample.pdf}
+  \caption{
+    Sample caption.
+  }\label{fig:sample}
+\end{figure}
+
+%%%%
+%%%% Summary and Discussion
+%%%%
+\section{Summary and Discussion\label{sec:summary}}
+
+Sample text.
+
+
+%%%%
+%%%% Acknowledgements
+%%%%
+\begin{acknowledgments}
+  % JSPS Grants
+  A.E. was supported by JSPS KAKENHI Grant Number JP12345678.
+  % Fugaku
+  This work used computational resources of supercomputer Fugaku provided by the RIKEN Center for Computational Science through the HPCI System Research Project (Project ID\@: hpNNNNNN).
+  % CIDAS
+  Data analysis was conducted using the computational resource of the Center for Integrated Data Science, Institute for Space-Earth Environmental Research, Nagoya University.
+\end{acknowledgments}
+
+%%%%
+%%%% Appendix
+%%%%
+\appendix
+
+\section{Sample Appendix\label{appendix:sample}}
+
+Sample text in appendix.
+
+%%%%
+%%%% Bibliography
+%%%%
+\bibliographystyle{aasjournal}
+\bibliography{reference}
+
+%%%%
+%%%% List of changes by \added{}, \deleted{}, or \replaced{}{}.
+%%%%
+% \listofchanges{}
+
+\end{document}
