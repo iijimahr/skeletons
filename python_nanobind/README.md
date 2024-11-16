@@ -1,4 +1,4 @@
-# nanobindを利用したPython仮想環境
+# nanobindのスケルトン
 
 ## 概要
 
